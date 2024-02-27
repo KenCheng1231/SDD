@@ -27,7 +27,7 @@ a {
 h1,
 p,
 a {
-  color: rgb(238, 238, 238);
+  color: rgb(255, 255, 255);
   /* 字統一白色 */
   font-family: 'Noto Sans TC', sans-serif;
   /* 字體，為了美觀 */
@@ -41,7 +41,7 @@ a {
   right: 0;
   /* 字統一白色 */
   padding: 2vh;
-  background-color: black;
+  background-color: rgba(98, 114, 61, 0.911);
   z-index: 3;
   height: 3vh;
   display: none;
@@ -50,7 +50,7 @@ a {
 /* 導航欄背景 */
 header {
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.911);
+  background-color: rgba(98, 114, 61, 0.911);
   position: absolute;
   top: 0;
   z-index: 0;
@@ -79,21 +79,21 @@ header a {
 
 /* 導航欄鼠標在上面是背景及字體轉顔色 */
 header a:hover {
-  background-color: rgb(255, 255, 255);
-  color: rgba(0, 0, 0, 0.897);
+  background-color: rgb(58, 68, 42);
+  color: rgb(255, 255, 255);
 }
 
 /* 導航欄在指定頁面時導航欄相對應的按鈕顯示不同顔色 */
 .btn-active {
-  background-color: rgb(255, 255, 255);
-  color: rgba(0, 0, 0, 0.897);
+  background-color: rgb(58, 68, 42);
+  color: rgb(255, 255, 255);
 }
 
 /* HOME背景 */
 #bg {
   width: 100%;
   height: 100vh;
-  background-image: url(../img/SOURCE/bg.jpg);
+  background-image: url(../img/SOURCE/bg.png);
   background-size: cover;
   background-position: center;
   text-align: center;
@@ -106,10 +106,10 @@ header a:hover {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 15vh;
-  text-shadow: 2px 2px 0 rgb(0, 0, 0);
-  font-size: 30px;
-  display: none;
+  bottom: 35vh;
+  color: white;
+  text-shadow: 2px 2px 0 rgb(23, 131, 13);
+  font-size: 50px;
 }
 
 /* 主要内容 */
@@ -169,7 +169,7 @@ header a:hover {
 }
 
 #sidebar a:hover {
-  color: rgba(0, 0, 0, 0.897);
+  color: rgb(58, 68, 42);
   background-color: white;
 }
 
@@ -379,10 +379,6 @@ form th {
     width: 320px;
   }
 
-  #web-title {
-    display: block;
-  }
-
   #ablum-list>a {
     width: 160px;
     height: 200px;
@@ -435,12 +431,12 @@ form th {
 
   .btn-active {
     color: rgb(255, 255, 255);
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgb(58, 68, 42);
   }
 
   .btn-active:hover {
-    background-color: rgb(255, 255, 255);
-    color: rgba(0, 0, 0, 0.897);
+    background-color: rgb(58, 68, 42);
+    color: rgb(255, 255, 255);
   }
 
   #ablum-list>a {
