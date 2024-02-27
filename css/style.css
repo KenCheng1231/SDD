@@ -197,7 +197,7 @@ header a:hover {
 /* ABLUM用flex顯示專輯 */
 #ablum-list {
   margin-top: 40px;
-  gap: 25px 25px;
+  gap: 5%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -206,7 +206,7 @@ header a:hover {
 
 /* 專輯的按鈕鏈接 */
 #ablum-list>a {
-  width: 280px;
+  width: 30%;
   height: 320px;
 }
 
@@ -217,8 +217,8 @@ header a:hover {
 
 /* 專輯封面 */
 .ablum_img {
-  width: 280px;
-  height: 280px;
+  width: 100%;
+  height: 250px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
