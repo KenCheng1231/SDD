@@ -2,14 +2,126 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SDD-Project</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!--網站名稱-->
+  <title>JayChou FanClub</title>
+
+  <!--CSS文件路徑-->
+  <link rel="stylesheet" href="./css/style.css" />
+
+  <!--JS文件路徑-->
+  <script src="./js/myscript.js"></script>
+
+  <!--Google Font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
 </head>
 
-<body>
-    
-</body>
+<body id="HOME">
 
+  <!--手機寬度才會顯示的菜單按鈕-->
+  <img id="menu-on" src="./img/SOURCE/menu.png" alt="menu-switch">
+  <img id="menu-off" src="./img/SOURCE/close.png" alt="menu-switch">
+
+  <!--導航欄-->
+  <header id="menu">
+    <img class="header-icon" src="./img/SOURCE/logo.png" alt="ablum_cover" />
+    <ul>
+      <li><a href="#HOME" id="home-menubtn" class="btn-active">HOME</a></li>
+      <li><a href="#ABLUM" id="ablum-menubtn">ALBUM</a></li>
+      <li><a href="#HISTORY" id="history-menubtn">NEWS</a></li>
+      <li><a href="#ABOUT" id="about-menubtn">ABOUT</a></li>
+    </ul>
+  </header>
+
+  <!--HOME背景-->
+  <div id="bg">
+    <div id="web-title">
+      <h1>Jay Chou</h1>
+      <p>Fan Club</p>
+    </div>
+  </div>
+
+  <!--主要内容-->
+  <div id="main">
+
+    <!--左側菜單-->
+    <div id="sidebarbg">
+      <div id="sidebar">
+        <img src="./img/SOURCE/logo.png" alt="logo" />
+        <ul>
+          <li>
+            <a href="#HOME" id="home-btn">HOME</a>
+          </li>
+          <li>
+            <a href="#ABLUM" id="ablum-btn">ALBUM</a>
+          </li>
+          <li>
+            <a href="#HISTORY" id="history-btn">NEWS</a>
+          </li>
+          <li>
+            <a href="#ABOUT" id="about-btn">ABOUT</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!--右側内容-->
+    <div id="body">
+
+      <!--ABLUM頁面-->
+      <div id="ABLUM">
+        <div id="ablum-content">
+          <h1>ABLUM</h1>
+          <div id="ablum-list">
+
+          </div>
+          <div class="read-more">
+            <a href="./html/ablum.html">MORE ABLUM</a>
+          </div>
+        </div>
+      </div>
+
+      <!--HISTORY頁面-->
+      <div id="HISTORY">
+        <div id="history-content">
+          <h1>NEWS</h1>
+          <table id="time_line">
+          </table>
+          <div class="read-more">
+            <a href="./html/history.html">MORE NEWS</a>
+          </div>
+        </div>
+      </div>
+
+      <!--ABOUT頁面-->
+      <div id="ABOUT">
+        <div id="about-content">
+          <div id="big-logo"></div>
+          <p>© copyright by xxx / JacChou Fan Club</p>
+          <a href="./html/form.html">【 Join Us 】</a>
+          <div id="social-media">
+            <a href="https://www.instagram.com/jaychou/"><img src="./img/ABOUT/instagram.png" alt="ig"></a>
+            <a href="https://www.facebook.com/JVRMusicOfficial/"><img src="./img/ABOUT/facebook.png" alt="fb"></a>
+            <a href="https://space.bilibili.com/3493087382866600/"><img src="./img/ABOUT/bilibili.png" alt="bb"></a>
+          </div>
+          <div id="company">
+            <a href="http://www.jvrmusic.com/"><img src="./img/ABOUT/JVR_Music_logo.jpg" alt="jvr"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--音樂播放器-->
+  <audio controls autoplay>
+    <source src="./audio/SunnyDay_JayChou.mp3" type="audio/mpeg" />
+    <source src="./audio/SunnyDay_JayChou.ogg" type="audio/ogg" />
+  </audio>
+</body>
 
 </html>
