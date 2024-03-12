@@ -87,10 +87,14 @@ window.onload = function () {
 
         document.getElementById("menu").style.display = "none";
 
-    } else if (filename == "history") { //當在history.html瀏覽時執行
+    } else if (filename == "study") { //當在study.html瀏覽時執行
 
-        for (k = year.length - 1; k >= 0; k--) {
-            document.getElementById("time_line").innerHTML += "<tr><td class='htime'>" + year[k] + "</td><td class='history-content'>" + content[k] + "</td></tr>"
+        for (m = 0; m < study_list.length; m++) {
+            document.getElementById("study-list").innerHTML += '<a href = "https://www.youtube.com/watch?v=' + study_list[m] + '"><div class="study_data"><div class="study_img"></div><p class="study_name"></p></div></a>'
+            var study_image = document.getElementsByClassName("study_img")[m]
+            var study_name = document.getElementsByClassName("study_name")[m]
+            study_image.style.backgroundImage = "url(https://img.youtube.com/vi/" + study_list[m] + "/hqdefault.jpg)"
+            study_name.innerHTML = study_list[m]
         }
 
         document.getElementById("menu").style.display = "none";
@@ -104,7 +108,7 @@ window.onload = function () {
     var screen_width = document.documentElement.clientWidth //獲取可見屏幕寬度
     var home_btn = document.getElementById("home-menubtn")
     var relax_btn = document.getElementById("relax-menubtn")
-    var history_btn = document.getElementById("history-menubtn")
+    var study_btn = document.getElementById("study-menubtn")
     var about_btn = document.getElementById("about-menubtn")
     if (screen_width <= 720) {
         btn_on.addEventListener("click", function () { //點擊監聽執行function
@@ -127,7 +131,7 @@ window.onload = function () {
             btn_on.style.display = "block";
             btn_off.style.display = "none";
         })
-        history_btn.addEventListener("click", function () {
+        study_btn.addEventListener("click", function () {
             header.style.display = "none";
             btn_on.style.display = "block";
             btn_off.style.display = "none";
