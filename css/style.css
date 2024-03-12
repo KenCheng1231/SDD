@@ -106,7 +106,7 @@ header a:hover {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 35vh;
+  bottom: 40vh;
   color: white;
   text-shadow: 2px 2px 0 rgb(23, 131, 13);
   font-size: 50px;
@@ -395,6 +395,10 @@ form th {
 
   .header-icon {
     display: none;
+  }
+
+  #web-title {
+    font-size: 30px;
   }
 
   header ul {
