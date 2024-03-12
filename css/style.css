@@ -373,7 +373,7 @@ form th {
 }
 
 /* 適用於手機的寬度樣式 */
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 800px) {
   #sidebarbg {
     display: none;
   }
