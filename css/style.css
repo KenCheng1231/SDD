@@ -41,7 +41,7 @@ a {
   right: 0;
   /* 字統一白色 */
   padding: 2vh;
-  background-color: rgba(98, 114, 61, 0.911);
+  background-color: rgba(53, 53, 53, 0.911);
   z-index: 3;
   height: 3vh;
   display: none;
@@ -50,7 +50,7 @@ a {
 /* 導航欄背景 */
 header {
   width: 100%;
-  background-color: rgba(98, 114, 61, 0.911);
+  background-color: rgba(53, 53, 53, 0.911);
   position: absolute;
   top: 0;
   z-index: 0;
@@ -79,14 +79,14 @@ header a {
 
 /* 導航欄鼠標在上面是背景及字體轉顔色 */
 header a:hover {
-  background-color: rgb(58, 68, 42);
-  color: rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
+  color: rgba(53, 53, 53, 0.911);
 }
 
 /* 導航欄在指定頁面時導航欄相對應的按鈕顯示不同顔色 */
 .btn-active {
-  background-color: rgb(58, 68, 42);
-  color: rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
+  color: rgba(53, 53, 53, 0.911);
 }
 
 /* HOME背景 */
@@ -412,13 +412,13 @@ form th {
   }
 
   .btn-active {
-    color: rgb(255, 255, 255);
-    background-color: rgb(58, 68, 42);
+    color: rgba(53, 53, 53, 0.911);
+    background-color: rgb(255, 255, 255);
   }
 
   .btn-active:hover {
-    background-color: rgb(58, 68, 42);
-    color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+    color: rgba(53, 53, 53, 0.911);
   }
 
   #relax-list>a,
