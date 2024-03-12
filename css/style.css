@@ -174,7 +174,7 @@ header a:hover {
 }
 
 /* 右側頁面 */
-#ABLUM,
+#RELAX,
 #STUDY,
 #ABOUT {
   width: 100%;
@@ -183,7 +183,7 @@ header a:hover {
 }
 
 /* 右側頁面 */
-#ablum-content,
+#relax-content,
 #study-content,
 #about-content {
   width: 80%;
@@ -193,9 +193,9 @@ header a:hover {
   margin-bottom: 50px;
 }
 
-/* ABLUM */
-/* ABLUM用flex顯示專輯 */
-#ablum-list,
+/* relax */
+/* relax用flex顯示專輯 */
+#relax-list,
 #study-list {
   margin-top: 40px;
   gap: 5%;
@@ -206,20 +206,20 @@ header a:hover {
 }
 
 /* 專輯的按鈕鏈接 */
-#ablum-list>a,
+#relax-list>a,
 #study-list>a {
   width: 30%;
   height: 300px;
 }
 
 /* 文字居中 */
-.ablum_data,
+.relax_data,
 .study_data {
   text-align: center;
 }
 
 /* 專輯封面 */
-.ablum_img,
+.relax_img,
 .study_img {
   width: 100%;
   height: 200px;
@@ -231,7 +231,7 @@ header a:hover {
 }
 
 /* 專輯名字 */
-.ablum_name,
+.relax_name,
 .study_name {
   font-size: 18px;
   margin-top: 8px;
@@ -239,13 +239,14 @@ header a:hover {
 }
 
 /* 鼠標在上面時放大圖片 */
-.ablum_data:hover .ablum_img,
+.relax_data:hover .relax_img,
 .study_data:hover .study_img {
   background-size: 120%;
 }
 
 /* 鼠標在上面時字體轉顔色 */
-.ablum_data:hover .ablum_name, .study_data:hover .study_name {
+.relax_data:hover .relax_name,
+.study_data:hover .study_name {
   color: aqua;
 }
 
@@ -353,17 +354,20 @@ form th {
     width: 320px;
   }
 
-  #ablum-list>a {
+  #relax-list>a,
+  #study-list>a {
     width: 160px;
     height: 200px;
   }
 
-  .ablum_img {
+  .relax_img,
+  .study_img {
     width: 160px;
     height: 160px;
   }
 
-  .ablum_name {
+  .relax_name,
+  .study_name {
     font-size: 15px;
   }
 
@@ -417,12 +421,14 @@ form th {
     color: rgb(255, 255, 255);
   }
 
-  #ablum-list>a {
+  #relax-list>a,
+  #study-list>a {
     width: 100%;
     height: 260px;
   }
 
-  .ablum_img {
+  .relax_img,
+  .study_img {
     width: 100%;
     height: 200px;
   }
