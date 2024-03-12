@@ -33,8 +33,8 @@ window.onload = function () {
 
         //滾動監聽，到達ID範圍就更改CSS值
         window.addEventListener('scroll', function () {
-            var IdList = ["HOME", "ABLUM", "HISTORY", "ABOUT"]
-            var menulist = ["home-btn", "ablum-btn", "history-btn", "about-btn"]
+            var IdList = ["HOME", "ABLUM", "STUDY", "ABOUT"]
+            var menulist = ["home-btn", "ablum-btn", "study-btn", "about-btn"]
             scroll_height = document.documentElement.scrollHeight //獲取整個網頁的高度
             scroll_top = document.documentElement.scrollTop //獲取已滾動的高度
             for (i = 0; i < IdList.length; i++) {

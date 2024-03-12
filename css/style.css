@@ -372,7 +372,7 @@ form th {
   }
 }
 
-/* 適用於手機的寬度yang's */
+/* 適用於手機的寬度樣式 */
 @media only screen and (max-width: 720px) {
   #sidebarbg {
     display: none;
