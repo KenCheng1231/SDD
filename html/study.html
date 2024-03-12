@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--網站名稱-->
+    <title>JayChou FanClub</title>
+
+    <!--CSS文件路徑-->
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <!--JS文件路徑-->
+    <script src="../js/myscript.js"></script>
+
+    <!--Google Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!--手機寬度才會顯示的菜單按鈕-->
+    <img id="menu-on" src="../img/SOURCE/menu.png" alt="menu-switch">
+    <img id="menu-off" src="../img/SOURCE/close.png" alt="menu-switch">
+
+    <!--導航欄-->
+    <header id="menu">
+        <img class="header-icon" src="./img/SOURCE/logo.png" alt="ablum_cover" />
+        <ul>
+            <li><a href="../index.html#HOME" id="home-menubtn">HOME</a></li>
+            <li><a href="../index.html#ABLUM" id="ablum-menubtn">ALBUM</a></li>
+            <li><a href="../index.html#STUDY" id="study-menubtn">NEWS</a></li>
+            <li><a href="../index.html#ABOUT" id="about-menubtn">ABOUT</a></li>
+        </ul>
+    </header>
+
+    <!--主要内容-->
+    <div id="main">
+
+        <!--左側菜單-->
+        <div id="sidebarbg">
+            <div id="sidebar">
+                <img src="../img/SOURCE/logo.png" alt="logo" />
+                <ul>
+                    <li>
+                        <a href="../index.html#HOME" id="home-btn">HOME</a>
+                    </li>
+                    <li>
+                        <a href="../index.html#ABLUM" id="ablum-btn">ALBUM</a>
+                    </li>
+                    <li>
+                        <a href="../index.html#STUDY" id="study-btn" class="btn-active">NEWS</a>
+                    </li>
+                    <li>
+                        <a href="../index.html#ABOUT" id="about-btn">ABOUT</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!--右側内容-->
+        <div id="body">
+
+            <!--study頁面-->
+            <div id="STUDY">
+                <div id="study-content">
+                    <h1>學習 & 工作</h1>
+                    <div id="study-list">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
