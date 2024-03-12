@@ -13,7 +13,7 @@ window.onload = function () {
         "uqlmazoOCmw",
         "9vak1ZGEUu8",
         "YAZOCtLMNmI",
-    ]
+    ];
 
     var study_list = [
         "mPZkdNFkNps",
@@ -21,7 +21,7 @@ window.onload = function () {
         "Ds7Gnig9TjA",
         "O6MDJZGtUUE",
         "mt87ltDUzVI"
-    ]
+    ];
 
 
     //當前開啓的HTML路徑
@@ -33,8 +33,8 @@ window.onload = function () {
 
         //滾動監聽，到達ID範圍就更改CSS值
         window.addEventListener('scroll', function () {
-            var IdList = ["HOME", "ABLUM", "STUDY", "ABOUT"]
-            var menulist = ["home-btn", "ablum-btn", "study-btn", "about-btn"]
+            var IdList = ["HOME", "RELAX", "STUDY", "ABOUT"]
+            var menulist = ["home-btn", "relax-btn", "study-btn", "about-btn"]
             scroll_height = document.documentElement.scrollHeight //獲取整個網頁的高度
             scroll_top = document.documentElement.scrollTop //獲取已滾動的高度
             for (i = 0; i < IdList.length; i++) {
@@ -58,31 +58,31 @@ window.onload = function () {
 
         //放入標簽並從Array獲取專輯圖片
         for (i = 0; i < 12; i++) {
-            document.getElementById("ablum-list").innerHTML += '<a href = "https://www.youtube.com/watch?v=' + video_list[i] + '"><div class="ablum_data"><div class="ablum_img"></div><p class="ablum_name"></p></div></a>'
-            var ablum_image = document.getElementsByClassName("ablum_img")[i]
-            var ablum_name = document.getElementsByClassName("ablum_name")[i]
-            ablum_image.style.backgroundImage = "url(https://img.youtube.com/vi/" + video_list[i] + "/hqdefault.jpg)"
-            ablum_name.innerHTML = video_list[i]
+            document.getElementById("relax-list").innerHTML += '<a href = "https://www.youtube.com/watch?v=' + video_list[i] + '"><div class="relax_data"><div class="relax_img"></div><p class="relax_name"></p></div></a>'
+            var relax_image = document.getElementsByClassName("relax_img")[i]
+            var relax_name = document.getElementsByClassName("relax_name")[i]
+            relax_image.style.backgroundImage = "url(https://img.youtube.com/vi/" + video_list[i] + "/hqdefault.jpg)"
+            relax_name.innerHTML = video_list[i]
         }
 
         //放入標簽並從Array獲取數據
         for (k = 0; k < 12; k++) {
-            document.getElementById("study-list").innerHTML += '<a href = "https://www.youtube.com/watch?v=' + study_list[i] + '"><div class="study_data"><div class="study_img"></div><p class="study_name"></p></div></a>'
-            var study_image = document.getElementsByClassName("study_img")[i]
-            var study_name = document.getElementsByClassName("study_name")[i]
-            study_image.style.backgroundImage = "url(https://img.youtube.com/vi/" + study_list[i] + "/hqdefault.jpg)"
-            study_name.innerHTML = study_list[i]
+            document.getElementById("study-list").innerHTML += '<a href = "https://www.youtube.com/watch?v=' + study_list[k] + '"><div class="study_data"><div class="study_img"></div><p class="study_name"></p></div></a>'
+            var study_image = document.getElementsByClassName("study_img")[k]
+            var study_name = document.getElementsByClassName("study_name")[k]
+            study_image.style.backgroundImage = "url(https://img.youtube.com/vi/" + study_list[k] + "/hqdefault.jpg)"
+            study_name.innerHTML = study_list[k]
         }
 
 
-    } else if (filename == "ablum") { //當在ablum.html瀏覽時執行
+    } else if (filename == "relax") { //當在relax.html瀏覽時執行
 
         for (l = 0; l < video_list.length; l++) {
-            document.getElementById("ablum-list").innerHTML += '<a href = "https://www.youtube.com/watch?v=' + video_list[l] + '"><div class="ablum_data"><div class="ablum_img"></div><p class="ablum_name"></p></div></a>'
-            var ablum_image = document.getElementsByClassName("ablum_img")[l]
-            var ablum_name = document.getElementsByClassName("ablum_name")[l]
-            ablum_image.style.backgroundImage = "url(https://img.youtube.com/vi/" + video_list[l] + "/hqdefault.jpg)"
-            ablum_name.innerHTML = video_list[l]
+            document.getElementById("relax-list").innerHTML += '<a href = "https://www.youtube.com/watch?v=' + video_list[l] + '"><div class="relax_data"><div class="relax_img"></div><p class="relax_name"></p></div></a>'
+            var relax_image = document.getElementsByClassName("relax_img")[l]
+            var relax_name = document.getElementsByClassName("relax_name")[l]
+            relax_image.style.backgroundImage = "url(https://img.youtube.com/vi/" + video_list[l] + "/hqdefault.jpg)"
+            relax_name.innerHTML = video_list[l]
         }
 
         document.getElementById("menu").style.display = "none";
@@ -103,7 +103,7 @@ window.onload = function () {
     var btn_off = document.getElementById("menu-off")
     var screen_width = document.documentElement.clientWidth //獲取可見屏幕寬度
     var home_btn = document.getElementById("home-menubtn")
-    var ablum_btn = document.getElementById("ablum-menubtn")
+    var relax_btn = document.getElementById("relax-menubtn")
     var history_btn = document.getElementById("history-menubtn")
     var about_btn = document.getElementById("about-menubtn")
     if (screen_width <= 720) {
@@ -122,7 +122,7 @@ window.onload = function () {
             btn_on.style.display = "block";
             btn_off.style.display = "none";
         })
-        ablum_btn.addEventListener("click", function () {
+        relax_btn.addEventListener("click", function () {
             header.style.display = "none";
             btn_on.style.display = "block";
             btn_off.style.display = "none";
