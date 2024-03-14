@@ -61,7 +61,7 @@ window.onload = function () {
             document.getElementById("relax-list").innerHTML += '<a href = "https://www.youtube.com/watch?v=' + video_list[i] + '"><div class="relax_data"><div class="relax_img"></div><p class="relax_name"></p></div></a>'
             var relax_image = document.getElementsByClassName("relax_img")[i]
             var relax_name = document.getElementsByClassName("relax_name")[i]
-            relax_image.style.backgroundImage = "url(https://img.youtube.com/vi/" + video_list[i] + "/hqdefault.jpg)"
+            relax_image.style.backgroundImage = "url(https://img.youtube.com/vi/" + video_list[i] + "/mqdefault.jpg)"
             relax_name.innerHTML = video_list[i]
         }
 
@@ -70,7 +70,7 @@ window.onload = function () {
             document.getElementById("study-list").innerHTML += '<a href = "https://www.youtube.com/watch?v=' + study_list[k] + '"><div class="study_data"><div class="study_img"></div><p class="study_name"></p></div></a>'
             var study_image = document.getElementsByClassName("study_img")[k]
             var study_name = document.getElementsByClassName("study_name")[k]
-            study_image.style.backgroundImage = "url(https://img.youtube.com/vi/" + study_list[k] + "/hqdefault.jpg)"
+            study_image.style.backgroundImage = "url(https://img.youtube.com/vi/" + study_list[k] + "/mqdefault.jpg)"
             study_name.innerHTML = study_list[k]
         }
 
