@@ -13,6 +13,19 @@ window.onload = function () {
         "uiq3NKEnqEg"
     ];
 
+    var video_list_name = [
+        "ASMR Programming - Coding Pacman - No Talking",
+        "ASMR Programming - Coding a Snake Game - No Talking",
+        "Relaxing Train Ride in Japan 🇯🇵 Shinkansen Osaka to Tokyo",
+        "[JAPAN TOKYO ASMR] 1 HOUR COMPLETE Yamanote Line 山手線 Train Ride - CAB VIEW 前面展望 - INNER LOOP | 4K",
+        "[JAPAN TOKYO ASMR] Yurikamome Line 新交通ゆりかもめ線 Train Ride - CAB VIEW 前面展望 - 4K",
+        "4k hdr japan travel 2024 | Walk in Harajuku（原宿）Tokyo japan | Relaxing Natural City ambience",
+        "Seoul KOREA - Myeongdong Night Walk 2024",
+        "Relaxing SOLO Camping with Rain Forest Mountain views [ gloomy weather, cosy shelter, rain ASMR ]",
+        "ASMR Travel Vlog | A Road Trip Through Italy",
+        "城市秘境，東京隱村的300年旅館 | 兜家旅館 | ASMR"
+    ]
+
     var study_list = [
         "ZEbCz7B2-Eg",
         "jfKfPfyJRdk",
@@ -24,6 +37,18 @@ window.onload = function () {
         "Dg0IjOzopYU",
         "9OPXTEORZZ8"
     ];
+
+    var study_list_name = [
+        "STUDY WITH ME 4hrs with breaks 🌙 50/10 pomodoro (no music)",
+        "lofi hip hop radio 📚 - beats to relax/study to",
+        "📚2.5小時實時學習(鋼琴輕音樂) ｜🚢 黃昏的橫濱港｜番茄工作法(25+5)｜自帶倒計時&鈴聲提醒｜Study with me",
+        "40 Million Dollar Cash Count - Big Money Count - ASMR",
+        "The Money Count - Over 15 Millions Dollars In Cash",
+        "SHARPEST DETAIL | 12K HDR DOLBY VISION™ 120FPS",
+        "The Alps 4K - Scenic Relaxation Film With Calming Music",
+        "Minecraft FULL SOUNDTRACK",
+        "JoJo's Rush Adventure"
+    ]
 
 
     //當前開啓的HTML路徑
@@ -58,13 +83,20 @@ window.onload = function () {
             }
         })
 
+        function limitText(text, maxLength) {
+            if (text.length > maxLength) {
+                return text.substring(0, maxLength) + '...';
+            }
+            return text;
+        }
+
         //放入標簽並從Array獲取專輯圖片
         for (i = 0; i < 9; i++) {
             document.getElementById("relax-list").innerHTML += '<a href = "https://www.youtube.com/watch?v=' + video_list[i] + '"><div class="relax_data"><div class="relax_img"></div><p class="relax_name"></p></div></a>'
             var relax_image = document.getElementsByClassName("relax_img")[i]
             var relax_name = document.getElementsByClassName("relax_name")[i]
             relax_image.style.backgroundImage = "url(./img/ASMR/" + video_list[i] + ".jpg)"
-            relax_name.innerHTML = video_list[i]
+            relax_name.innerHTML = limitText(video_list_name[i], 40)
         }
 
         //放入標簽並從Array獲取數據
@@ -73,7 +105,7 @@ window.onload = function () {
             var study_image = document.getElementsByClassName("study_img")[k]
             var study_name = document.getElementsByClassName("study_name")[k]
             study_image.style.backgroundImage = "url(./img/STUDY/" + study_list[k] + ".jpg)"
-            study_name.innerHTML = study_list[k]
+            study_name.innerHTML = limitText(study_list_name[k], 40)
         }
 
 
@@ -84,7 +116,7 @@ window.onload = function () {
             var relax_image = document.getElementsByClassName("relax_img")[l]
             var relax_name = document.getElementsByClassName("relax_name")[l]
             relax_image.style.backgroundImage = "url(https://img.youtube.com/vi/" + video_list[l] + "/hqdefault.jpg)"
-            relax_name.innerHTML = video_list[l]
+            relax_name.innerHTML = limitText(video_list_name[l], 40)
         }
 
         document.getElementById("menu").style.display = "none";
@@ -96,7 +128,7 @@ window.onload = function () {
             var study_image = document.getElementsByClassName("study_img")[m]
             var study_name = document.getElementsByClassName("study_name")[m]
             study_image.style.backgroundImage = "url(https://img.youtube.com/vi/" + study_list[m] + "/hqdefault.jpg)"
-            study_name.innerHTML = study_list[m]
+            study_name.innerHTML = limitText(study_list_name[m], 40)
         }
 
         document.getElementById("menu").style.display = "none";
