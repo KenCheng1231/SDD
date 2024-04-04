@@ -56,6 +56,13 @@ window.onload = function () {
     //HTML路徑截取為HTML文件的名字
     var filename = location.substring(location.lastIndexOf("/") + 1, location.lastIndexOf("."))
 
+    function limitText(text, maxLength) {
+        if (text.length > maxLength) {
+            return text.substring(0, maxLength) + '...';
+        }
+        return text;
+    }
+
     if (filename == "index") { //當在index.html瀏覽時執行
 
         //滾動監聽，到達ID範圍就更改CSS值
@@ -83,13 +90,6 @@ window.onload = function () {
             }
         })
 
-        function limitText(text, maxLength) {
-            if (text.length > maxLength) {
-                return text.substring(0, maxLength) + '...';
-            }
-            return text;
-        }
-
         //放入標簽並從Array獲取專輯圖片
         for (i = 0; i < 9; i++) {
             document.getElementById("relax-list").innerHTML += '<a href = "https://www.youtube.com/watch?v=' + video_list[i] + '"><div class="relax_data"><div class="relax_img"></div><p class="relax_name"></p></div></a>'
@@ -115,7 +115,7 @@ window.onload = function () {
             document.getElementById("relax-list").innerHTML += '<a href = "https://www.youtube.com/watch?v=' + video_list[l] + '"><div class="relax_data"><div class="relax_img"></div><p class="relax_name"></p></div></a>'
             var relax_image = document.getElementsByClassName("relax_img")[l]
             var relax_name = document.getElementsByClassName("relax_name")[l]
-            relax_image.style.backgroundImage = "url(https://img.youtube.com/vi/" + video_list[l] + "/hqdefault.jpg)"
+            relax_image.style.backgroundImage = "url(../img/ASMR/" + video_list[l] + ".jpg)"
             relax_name.innerHTML = limitText(video_list_name[l], 40)
         }
 
@@ -127,7 +127,7 @@ window.onload = function () {
             document.getElementById("study-list").innerHTML += '<a href = "https://www.youtube.com/watch?v=' + study_list[m] + '"><div class="study_data"><div class="study_img"></div><p class="study_name"></p></div></a>'
             var study_image = document.getElementsByClassName("study_img")[m]
             var study_name = document.getElementsByClassName("study_name")[m]
-            study_image.style.backgroundImage = "url(https://img.youtube.com/vi/" + study_list[m] + "/hqdefault.jpg)"
+            study_image.style.backgroundImage = "url(../img/STUDY/" + study_list[m] + ".jpg)"
             study_name.innerHTML = limitText(study_list_name[m], 40)
         }
 
