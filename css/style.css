@@ -106,10 +106,17 @@ header a:hover {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 40vh;
+  bottom: 35vh;
   color: white;
-  text-shadow: 2px 2px 0 rgb(23, 131, 13);
-  font-size: 50px;
+  text-shadow: 3px 2px 0 rgb(54, 54, 54);
+}
+
+#web-title h1 {
+  font-size: 100px;
+}
+
+#web-title p {
+  font-size: 30px;
 }
 
 /* 主要内容 */
@@ -290,11 +297,15 @@ header a:hover {
 }
 
 /* 關於頁面的字體格式化 */
-#about-content p {
+#about-content #copyright {
   font-weight: lighter;
   font-size: small;
-  margin-top: 50px;
+  margin-top: 150px;
   margin-bottom: 150px;
+}
+
+#about-content p {
+  margin: 100px 0 100px 0;
 }
 
 /* 關於頁面的h1字體格式化 */
@@ -312,22 +323,6 @@ header a:hover {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-}
-
-/* 關於頁面的社交媒體上下外部間距 */
-#social-media {
-  margin: 20px 0 60px 0;
-}
-
-/* 關於頁面的社交媒體圖標的高度及外部間距 */
-#social-media img {
-  height: 50px;
-  margin: 20px;
-}
-
-/* 關於頁面的公司圖片的高度 */
-#company img {
-  height: 80px;
 }
 
 /* read more button */
@@ -360,24 +355,7 @@ audio {
   color: white;
 }
 
-form {
-  background-color: rgba(0, 0, 0, 0.63);
-  border: 1px solid white;
-  width: 30%;
-  padding: 25px;
-  position: absolute;
-  bottom: 35vh;
-  left: 35%;
-}
 
-form input {
-  width: 60%;
-}
-
-form th {
-  height: 10vh;
-  font-size: 35px;
-}
 
 /* 適用於平板的寬度樣式 */
 @media only screen and (max-width: 1024px) {
@@ -433,7 +411,15 @@ form th {
   }
 
   #web-title {
-    font-size: 30px;
+    bottom: 45vh;
+  }
+
+  #web-title h1 {
+    font-size: 60px;
+  }
+  
+  #web-title p {
+    font-size: 15px;
   }
 
   header ul {
@@ -467,6 +453,7 @@ form th {
     width: 100%;
     height: 180px;
   }
+
   .cat_dog_img {
     height: 340px;
   }
@@ -483,12 +470,4 @@ form th {
     height: 150px;
   }
 
-  #company img {
-    height: 50px;
-  }
-
-  form {
-    width: 60%;
-    left: 15%;
-  }
 }

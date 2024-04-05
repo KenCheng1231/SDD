@@ -71,6 +71,7 @@ window.onload = function () {
     var home_btn = document.getElementById("home-menubtn")
     var relax_btn = document.getElementById("relax-menubtn")
     var study_btn = document.getElementById("study-menubtn")
+    var cat_dog_btn = document.getElementById("cat_dog-menubtn")
     var about_btn = document.getElementById("about-menubtn")
 
     if (filename == "index") { //當在index.html瀏覽時執行
