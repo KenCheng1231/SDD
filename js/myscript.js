@@ -67,8 +67,8 @@ window.onload = function () {
 
         //滾動監聽，到達ID範圍就更改CSS值
         window.addEventListener('scroll', function () {
-            var IdList = ["HOME", "RELAX", "STUDY", "ABOUT"]
-            var menulist = ["home-btn", "relax-btn", "study-btn", "about-btn"]
+            var IdList = ["HOME", "RELAX", "STUDY", "CAT_DOG", "ABOUT"]
+            var menulist = ["home-btn", "relax-btn", "study-btn", "cat_dog-btn", "about-btn"]
             scroll_height = document.documentElement.scrollHeight //獲取整個網頁的高度
             scroll_top = document.documentElement.scrollTop //獲取已滾動的高度
             for (i = 0; i < IdList.length; i++) {
@@ -106,6 +106,13 @@ window.onload = function () {
             var study_name = document.getElementsByClassName("study_name")[k]
             study_image.style.backgroundImage = "url(./img/STUDY/" + study_list[k] + ".jpg)"
             study_name.innerHTML = limitText(study_list_name[k], 40)
+        }
+
+        //放入標簽並從Array獲取數據
+        for (n = 0; n < 12; n++) {
+            document.getElementById("cat_dog-list").innerHTML += '<a href = "./img/cat_dog/' + n + '.jpg"><div class="cat_dog_data"><div class="cat_dog_img"></div></div></a>'
+            var cat_dog_image = document.getElementsByClassName("cat_dog_img")[n]
+            cat_dog_image.style.backgroundImage = "url(./img/cat_dog/" + n + ".jpg)"
         }
 
 
@@ -166,6 +173,11 @@ window.onload = function () {
             btn_off.style.display = "none";
         })
         study_btn.addEventListener("click", function () {
+            header.style.display = "none";
+            btn_on.style.display = "block";
+            btn_off.style.display = "none";
+        })
+        cat_dog_btn.addEventListener("click", function () {
             header.style.display = "none";
             btn_on.style.display = "block";
             btn_off.style.display = "none";
