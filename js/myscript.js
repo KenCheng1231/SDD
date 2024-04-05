@@ -63,6 +63,16 @@ window.onload = function () {
         return text;
     }
 
+    //Mobile Phone Menu Control
+    var header = document.getElementById("menu")
+    var btn_on = document.getElementById("menu-on")
+    var btn_off = document.getElementById("menu-off")
+    var screen_width = document.documentElement.clientWidth //獲取可見屏幕寬度
+    var home_btn = document.getElementById("home-menubtn")
+    var relax_btn = document.getElementById("relax-menubtn")
+    var study_btn = document.getElementById("study-menubtn")
+    var about_btn = document.getElementById("about-menubtn")
+
     if (filename == "index") { //當在index.html瀏覽時執行
 
         //滾動監聽，到達ID範圍就更改CSS值
@@ -90,8 +100,21 @@ window.onload = function () {
             }
         })
 
-        //放入標簽並從Array獲取專輯圖片
-        for (i = 0; i < 9; i++) {
+        if (screen_width <= 720) {
+            img_num = 2
+        }
+        else {
+            img_num = 9
+        }
+
+        if (screen_width <= 720) {
+            anm_img_num = 2
+        }
+        else {
+            anm_img_num = 12
+        }
+
+        for (i = 0; i < img_num; i++) {
             document.getElementById("relax-list").innerHTML += '<a href = "https://www.youtube.com/watch?v=' + video_list[i] + '"><div class="relax_data"><div class="relax_img"></div><p class="relax_name"></p></div></a>'
             var relax_image = document.getElementsByClassName("relax_img")[i]
             var relax_name = document.getElementsByClassName("relax_name")[i]
@@ -99,8 +122,8 @@ window.onload = function () {
             relax_name.innerHTML = limitText(video_list_name[i], 40)
         }
 
-        //放入標簽並從Array獲取數據
-        for (k = 0; k < 9; k++) {
+        //放入標簽並從Array獲取
+        for (k = 0; k < img_num; k++) {
             document.getElementById("study-list").innerHTML += '<a href = "https://www.youtube.com/watch?v=' + study_list[k] + '"><div class="study_data"><div class="study_img"></div><p class="study_name"></p></div></a>'
             var study_image = document.getElementsByClassName("study_img")[k]
             var study_name = document.getElementsByClassName("study_name")[k]
@@ -109,7 +132,7 @@ window.onload = function () {
         }
 
         //放入標簽並從Array獲取數據
-        for (n = 0; n < 12; n++) {
+        for (n = 0; n < anm_img_num; n++) {
             document.getElementById("cat_dog-list").innerHTML += '<a href = "./img/cat_dog/' + n + '.jpg"><div class="cat_dog_data"><div class="cat_dog_img"></div></div></a>'
             var cat_dog_image = document.getElementsByClassName("cat_dog_img")[n]
             cat_dog_image.style.backgroundImage = "url(./img/cat_dog/" + n + ".jpg)"
@@ -140,17 +163,18 @@ window.onload = function () {
 
         document.getElementById("menu").style.display = "none";
 
+    } else if (filename == "cat_dog") { //當在study.html瀏覽時執行
+
+        for (o = 0; o < 14; o++) {
+            document.getElementById("cat_dog-list").innerHTML += '<a href = "../img/cat_dog/' + o + '.jpg"><div class="cat_dog_data"><div class="cat_dog_img"></div></div></a>'
+            var cat_dog_image = document.getElementsByClassName("cat_dog_img")[o]
+            cat_dog_image.style.backgroundImage = "url(../img/cat_dog/" + o + ".jpg)"
+        }
+
+        document.getElementById("menu").style.display = "none";
+
     }
 
-    //Mobile Phone Menu Control
-    var header = document.getElementById("menu")
-    var btn_on = document.getElementById("menu-on")
-    var btn_off = document.getElementById("menu-off")
-    var screen_width = document.documentElement.clientWidth //獲取可見屏幕寬度
-    var home_btn = document.getElementById("home-menubtn")
-    var relax_btn = document.getElementById("relax-menubtn")
-    var study_btn = document.getElementById("study-menubtn")
-    var about_btn = document.getElementById("about-menubtn")
     if (screen_width <= 720) {
         btn_on.addEventListener("click", function () { //點擊監聽執行function
             header.style.display = "block";

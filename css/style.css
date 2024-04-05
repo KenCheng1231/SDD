@@ -458,10 +458,17 @@ form th {
     height: 260px;
   }
 
+  #cat_dog-list>a {
+    width: 100%;
+  }
+
   .relax_img,
   .study_img {
     width: 100%;
-    height: 200px;
+    height: 180px;
+  }
+  .cat_dog_img {
+    height: 340px;
   }
 
   #time_line td:nth-child(1) {
