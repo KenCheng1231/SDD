@@ -451,11 +451,11 @@ audio {
   .relax_img,
   .study_img {
     width: 100%;
-    height: 180px;
+    height: 170px;
   }
 
   .cat_dog_img {
-    height: 340px;
+    height: 330px;
   }
 
   #time_line td:nth-child(1) {
