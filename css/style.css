@@ -358,30 +358,32 @@ audio {
 
 
 /* 適用於平板的寬度樣式 */
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1524px) {
   #sidebarbg {
     width: 320px;
   }
 
   #relax-list>a,
   #study-list>a {
-    width: 160px;
-    height: 200px;
+    height: 190px;
   }
 
   .relax_img,
   .study_img {
-    width: 160px;
-    height: 160px;
+    height: 100px;
+  }
+
+  .cat_dog_img {
+    height: 150px;
   }
 
   .relax_name,
   .study_name {
-    font-size: 15px;
+    font-size: 10px;
   }
-
-  audio {
-    display: none;
+  
+  #big-logo {
+    height: 150px;
   }
 }
 
