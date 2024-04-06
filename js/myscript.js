@@ -72,14 +72,15 @@ window.onload = function () {
     var relax_btn = document.getElementById("relax-menubtn")
     var study_btn = document.getElementById("study-menubtn")
     var cat_dog_btn = document.getElementById("cat_dog-menubtn")
+    var test_btn = document.getElementById("test-menubtn")
     var about_btn = document.getElementById("about-menubtn")
 
     if (filename == "index") { //當在index.html瀏覽時執行
 
         //滾動監聽，到達ID範圍就更改CSS值
         window.addEventListener('scroll', function () {
-            var IdList = ["HOME", "RELAX", "STUDY", "CAT_DOG", "ABOUT"]
-            var menulist = ["home-btn", "relax-btn", "study-btn", "cat_dog-btn", "about-btn"]
+            var IdList = ["HOME", "RELAX", "STUDY", "CAT_DOG", "TEST", "ABOUT"]
+            var menulist = ["home-btn", "relax-btn", "study-btn", "cat_dog-btn", "test-btn", "about-btn"]
             scroll_height = document.documentElement.scrollHeight //獲取整個網頁的高度
             scroll_top = document.documentElement.scrollTop //獲取已滾動的高度
             for (i = 0; i < IdList.length; i++) {
@@ -203,6 +204,11 @@ window.onload = function () {
             btn_off.style.display = "none";
         })
         cat_dog_btn.addEventListener("click", function () {
+            header.style.display = "none";
+            btn_on.style.display = "block";
+            btn_off.style.display = "none";
+        })
+        test_btn.addEventListener("click", function () {
             header.style.display = "none";
             btn_on.style.display = "block";
             btn_off.style.display = "none";

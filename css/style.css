@@ -184,6 +184,7 @@ header a:hover {
 #RELAX,
 #STUDY,
 #CAT_DOG,
+#TEST,
 #ABOUT {
   width: 100%;
   background-color: rgb(70, 70, 70);
@@ -194,12 +195,20 @@ header a:hover {
 #relax-content,
 #study-content,
 #cat_dog-content,
+#test-content,
 #about-content {
   width: 80%;
   position: relative;
   margin: 0 auto;
   margin-top: 50px;
   margin-bottom: 50px;
+}
+
+#test-content iframe {
+  width: 100%;
+  height: 80vh;
+  margin-top: 40px;
+  background-color: white;
 }
 
 /* relax */
@@ -381,7 +390,7 @@ audio {
   .study_name {
     font-size: 10px;
   }
-  
+
   #big-logo {
     height: 150px;
   }
@@ -419,7 +428,7 @@ audio {
   #web-title h1 {
     font-size: 60px;
   }
-  
+
   #web-title p {
     font-size: 15px;
   }
